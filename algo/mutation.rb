@@ -3,7 +3,15 @@
 # the first string, and false otherwise.
 
 def mutation?(base_word, mutation)
-
+  first_word = base_word.split(//)
+  second_word = mutation.split(//)
+  second_word_length_check = 0
+  second_word.each do |letter|
+    if first_word.include?(letter)
+      second_word_length_check += 1
+    end
+  end
+  second_word.length == second_word_length_check
 end
 
 # Driver code - don't touch anything below this line.
