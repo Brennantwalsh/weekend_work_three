@@ -3,7 +3,26 @@
 # numbers, inclusive.
 
 def sum_of_range(array)
+  first_number = 0
+  second_number = 0
+  array.each do |instance|
+    if instance > second_number
 
+      first_number = second_number
+      second_number = instance
+      
+    else first_number = instance
+    end
+  end
+  range = first_number..second_number
+  sum = 0
+  
+  range.each do |number|
+    sum += number.abs
+    
+  end
+  sum
+  
 end
 
 # Driver code - don't touch anything below this line.
